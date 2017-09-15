@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		228D575C1F69F1B300454B3C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228D575B1F69F1B300454B3C /* APIService.swift */; };
+		22904E581F6C806E0029F4AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22904E561F6C806E0029F4AE /* MainViewController.swift */; };
+		22904E591F6C806E0029F4AE /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22904E571F6C806E0029F4AE /* MainViewController.xib */; };
+		22A796921F69E17F001155F9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A796911F69E17F001155F9 /* Authentication.storyboard */; };
+		22A796941F69E1E6001155F9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A796931F69E1E6001155F9 /* LogInViewController.swift */; };
+		22A796961F69E55D001155F9 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A796951F69E55D001155F9 /* LogInViewModel.swift */; };
 		22CE37AD1F69C3060040DC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE37AC1F69C3060040DC75 /* AppDelegate.swift */; };
 		22CE37B41F69C3060040DC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CE37B31F69C3060040DC75 /* Assets.xcassets */; };
 		22CE37B71F69C3060040DC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CE37B51F69C3060040DC75 /* LaunchScreen.storyboard */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		1065CF434DC1201313EEF68A /* Pods-whale-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whale-clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-whale-clone/Pods-whale-clone.release.xcconfig"; sourceTree = "<group>"; };
+		228D575B1F69F1B300454B3C /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		22904E561F6C806E0029F4AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		22904E571F6C806E0029F4AE /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		22A796911F69E17F001155F9 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		22A796931F69E1E6001155F9 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		22A796951F69E55D001155F9 /* LogInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		22CE37A91F69C3060040DC75 /* whale-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whale-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CE37AC1F69C3060040DC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CE37B31F69C3060040DC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +74,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22904E551F6C804D0029F4AE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				22904E561F6C806E0029F4AE /* MainViewController.swift */,
+				22904E571F6C806E0029F4AE /* MainViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		22A7968F1F69DDA9001155F9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22904E551F6C804D0029F4AE /* Main */,
+				22A796901F69DDB5001155F9 /* Authentication */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		22A796901F69DDB5001155F9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				22A796911F69E17F001155F9 /* Authentication.storyboard */,
+				22A796931F69E1E6001155F9 /* LogInViewController.swift */,
+				22A796951F69E55D001155F9 /* LogInViewModel.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		22A796971F69F157001155F9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				228D575B1F69F1B300454B3C /* APIService.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		22CE37A01F69C3060040DC75 = {
 			isa = PBXGroup;
 			children = (
@@ -85,10 +133,12 @@
 		22CE37AB1F69C3060040DC75 /* whale-clone */ = {
 			isa = PBXGroup;
 			children = (
+				22CE37B81F69C3060040DC75 /* Info.plist */,
 				22CE37AC1F69C3060040DC75 /* AppDelegate.swift */,
 				22CE37B31F69C3060040DC75 /* Assets.xcassets */,
 				22CE37B51F69C3060040DC75 /* LaunchScreen.storyboard */,
-				22CE37B81F69C3060040DC75 /* Info.plist */,
+				22A796971F69F157001155F9 /* Networking */,
+				22A7968F1F69DDA9001155F9 /* Scenes */,
 			);
 			path = "whale-clone";
 			sourceTree = "<group>";
@@ -131,6 +181,7 @@
 			buildPhases = (
 				3B4BD1AA04E13B70BD9F7015 /* [CP] Check Pods Manifest.lock */,
 				22CE37A51F69C3060040DC75 /* Sources */,
+				22904E5A1F6C84130029F4AE /* ShellScript */,
 				22CE37A61F69C3060040DC75 /* Frameworks */,
 				22CE37A71F69C3060040DC75 /* Resources */,
 				EF4A7F0711656D53FB311E38 /* [CP] Embed Pods Frameworks */,
@@ -213,8 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A796921F69E17F001155F9 /* Authentication.storyboard in Resources */,
 				22CE37B71F69C3060040DC75 /* LaunchScreen.storyboard in Resources */,
 				22CE37B41F69C3060040DC75 /* Assets.xcassets in Resources */,
+				22904E591F6C806E0029F4AE /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +281,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22904E5A1F6C84130029F4AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" -type f\\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
 		29D4648B659153D18FE0E2ED /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,7 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A796941F69E1E6001155F9 /* LogInViewController.swift in Sources */,
+				22A796961F69E55D001155F9 /* LogInViewModel.swift in Sources */,
+				228D575C1F69F1B300454B3C /* APIService.swift in Sources */,
 				22CE37AD1F69C3060040DC75 /* AppDelegate.swift in Sources */,
+				22904E581F6C806E0029F4AE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
