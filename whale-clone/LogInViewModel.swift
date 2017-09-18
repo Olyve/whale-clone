@@ -22,8 +22,16 @@ class LogInViewModel: LogInViewModelType {
   
   func logInUser(email: String, password: String) {
     apiProvider.request(.loginUser(username: email, password: password)) { result in
-       if result.value?.statusCode == 200 && result.value?.data != nil {
-        self.userIsAuthenticated.value = true
+      switch result {
+      case let .success(moyaResponse):
+        if moyaResponse.statusCode == 200 {
+          self.userIsAuthenticated.value = true
+        }
+        else if 400 ... 499 ~= moyaResponse.statusCode {
+          print("ERROR: \(moyaResponse.statusCode) Bad Request")
+        }
+      case let .failure(error):
+        print(error.errorDescription ?? "Unkown error has occured!")
       }
     }
   }

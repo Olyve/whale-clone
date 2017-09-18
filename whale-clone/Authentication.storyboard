@@ -64,6 +64,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Yf8-sU-heG"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="vK9-yt-cWb" eventType="touchUpInside" id="Sn0-sT-jPJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,12 +85,31 @@
                     <navigationItem key="navigationItem" title="Log In" id="VxD-kB-j0s"/>
                     <connections>
                         <outlet property="email" destination="bzT-Ke-OYv" id="oNk-Ex-5Fg"/>
+                        <outlet property="logInButton" destination="cOB-Jw-kku" id="ium-3o-Uqn"/>
                         <outlet property="password" destination="qpd-SO-UD0" id="B9o-WD-rB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qy7-hh-d6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020" y="139.880059970015"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="jqx-p9-3WS">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="1d7-i5-55E" customClass="SignUpViewController" customModule="whale_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UDr-Ej-2Yo"/>
+                        <viewControllerLayoutGuide type="bottom" id="TyI-il-0BY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="czp-Py-CyX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vlG-p9-IBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYl-47-O2W">

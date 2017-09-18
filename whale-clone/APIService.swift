@@ -14,6 +14,7 @@ enum APIService {
 
 // MARK: - TargetType
 extension APIService: TargetType {
+  
   var baseURL: URL { return URL(string: "https://whale2-elixir.herokuapp.com/api/v1")! }
   
   var path: String {
@@ -30,30 +31,23 @@ extension APIService: TargetType {
     }
   }
   
-  var parameters: [String : Any]? {
+  var headers: [String : String]? {
     switch self {
-    case .loginUser(let email, let password):
-      return ["email": email, "password": password]
-    }
-  }
-  
-  var parameterEncoding: ParameterEncoding {
-    switch self {
-    case .loginUser(_,_):
-      return URLEncoding.queryString
+    default:
+      return nil
     }
   }
   
   var task: Task {
     switch self {
-    case .loginUser(_,_):
-      return .request
+    case let .loginUser(email, password):
+      return .requestParameters(parameters: ["email": email, "password": password], encoding: URLEncoding.queryString)
     }
   }
   
   var sampleData: Data {
     switch self {
-    case .loginUser(let email, let password):
+    case let .loginUser(email, password):
       return "{\"email\": \(email), \"password\": \(password)}".utf8Encoded
     }
   }

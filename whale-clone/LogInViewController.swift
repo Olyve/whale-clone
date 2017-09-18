@@ -11,6 +11,7 @@ import UIKit
 class LogInViewController: UIViewController {
   @IBOutlet weak var email: UITextField!
   @IBOutlet weak var password: UITextField!
+  @IBOutlet weak var logInButton: UIButton!
   
   fileprivate var viewModel: LogInViewModelType = LogInViewModel()
   
@@ -28,7 +29,7 @@ class LogInViewController: UIViewController {
   
   // Override dismisses keyboard on tap
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    self.view.endEditing(true)
+    view.endEditing(true)
   }
   
   @IBAction func logInTapped(_ sender: UIButton) {
@@ -36,7 +37,15 @@ class LogInViewController: UIViewController {
           let password = password.text
       else { return }
     
+    view.endEditing(true)
+    logInButton.isEnabled = false
+    
     viewModel.logInUser(email: email, password: password)
   }
   
+  @IBAction func signUpTapped(_ sender: UIButton) {
+    // TODO: This probably does not belong here. Fix this.
+    let signUp = UIStoryboard(name: "Authentication", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController")
+    navigationController?.pushViewController(signUp, animated: true)
+  }
 }
